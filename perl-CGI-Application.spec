@@ -8,12 +8,12 @@
 Summary:	CGI::Application - Framework for building reusable web-applications
 Summary(pl):	CGI::Application - Szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
 Name:		perl-CGI-Application
-Version:	3.21
+Version:	3.22
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	998f63187245407cc3f2dfc6c3bcef32
+# Source0-md5:	cff5d3381c1d7f50c3ad3525045e063b
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Module-Build >= 0.20
 %if %{with tests}
