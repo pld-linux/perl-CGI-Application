@@ -1,7 +1,7 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
-#
+%bcond_with tests 	# do perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CGI
 %define	pnam	Application
@@ -9,18 +9,19 @@ Summary:	CGI::Application - Framework for building reusable web-applications
 Summary(pl):	CGI::Application - Szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
 Name:		perl-CGI-Application
 Version:	3.1
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 # Source0-md5:	9979fc246cfa31b40c202f7bb4c8b87f
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-devel >= 5.6
-%if %{?_without_tests:0}%{!?_without_tests:1}
+%if %{with tests}
 BuildRequires:	perl-CGI
 BuildRequires:	perl-HTML-Template
 BuildRequires:	perl-Test-Simple
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpm-build >= 4.3-0.20030515.6
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,7 +46,7 @@ dokumentowaniu, pisaniu i ewoluowaniu.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
