@@ -8,13 +8,14 @@
 Summary:	CGI::Application - Framework for building reusable web-applications
 Summary(pl):	CGI::Application - Szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
 Name:		perl-CGI-Application
-Version:	3.1
-Release:	2
-License:	GPL/Artistic
+Version:	3.21
+Release:	1
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
-# Source0-md5:	9979fc246cfa31b40c202f7bb4c8b87f
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	998f63187245407cc3f2dfc6c3bcef32
 BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-Module-Build >= 0.20
 %if %{with tests}
 BuildRequires:	perl-CGI
 BuildRequires:	perl-HTML-Template
@@ -42,16 +43,17 @@ dokumentowaniu, pisaniu i ewoluowaniu.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
-%{__make}
+%{__perl} Build.PL Makefile.PL \
+	installdirs=vendor \
+	destdir=$RPM_BUILD_ROOT
+./Build
 
-%{?with_tests:%{__make} test}
+%{?with_tests:./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+./Build install
 
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a Examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
@@ -62,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ANNOUNCE README Changes
-%{perl_vendorlib}/%{pdir}/*.pm
-%{perl_vendorlib}/%{pdir}/%{pnam}
+%{perl_vendorlib}/CGI/*.pm
+%{perl_vendorlib}/CGI/%{pnam}
 %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
