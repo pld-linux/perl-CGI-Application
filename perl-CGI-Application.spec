@@ -10,7 +10,7 @@ Summary(pl):	CGI::Application - szkielet do tworzenia aplikacji WWW wielokrotneg
 Name:		perl-CGI-Application
 Version:	3.22
 Release:	1
-License:	GPL or Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	cff5d3381c1d7f50c3ad3525045e063b
