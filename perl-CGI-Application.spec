@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CGI
 %define	pnam	Application
-Summary:	CGI::Application - Framework for building reusable web-applications
-Summary(pl):	CGI::Application - Szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
+Summary:	CGI::Application - framework for building reusable web-applications
+Summary(pl):	CGI::Application - szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
 Name:		perl-CGI-Application
 Version:	3.22
 Release:	1
