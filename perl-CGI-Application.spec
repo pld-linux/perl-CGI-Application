@@ -3,8 +3,8 @@
 %bcond_with	tests	# do perform "make test"
 
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	CGI
-%define	pnam	Application
+%define		pdir	CGI
+%define		pnam	Application
 Summary:	CGI::Application - framework for building reusable web-applications
 Summary(pl):	CGI::Application - szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
 Name:		perl-CGI-Application
