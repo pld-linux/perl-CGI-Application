@@ -5,36 +5,35 @@
 %define	pdir	CGI
 %define	pnam	Application
 Summary:	CGI::Application - Framework for building reusable web-applications
-#Summary(pl):	CGI::Application - Szkielet do budowania [?] aplikacji WWW
+Summary(pl):	CGI::Application - Szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
 Name:		perl-CGI-Application
 Version:	2.5
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-26
 %if %{?_without_tests:0}%{!?_without_tests:1}
 BuildRequires:	perl-CGI
 BuildRequires:	perl-HTML-Template
 BuildRequires:	perl-Test-Simple
 %endif
+BuildRequires:	rpm-perlprov >= 3.0.3-26
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-CGI::Application is intended to make it easier to create sophisticated,
-reusable web-based applications.  This module implements a methodology
-which, if followed, will make your web software easier to design, easier
-to document, easier to write, and easier to evolve.
+CGI::Application is intended to make it easier to create
+sophisticated, reusable web-based applications. This module implements
+a methodology which, if followed, will make your web software easier
+to design, easier to document, easier to write, and easier to evolve.
 
-# %description -l pl
-# FIXME
-# CGI::Application jest przeznaczony do u³atwiania tworzenia z³o¿onych,
-# [ jak przet³umaczyæ ,,reusable''? ] aplikacji opartych na WWW.  Ten modu³
-# implementuje metodologiê, która -- je¶li stosowana -- sprawi, ¿e Twoje
-# oprogramowanie sieciowe bêdzie prostrze w projektowaniu, dokumentowaniu,
-# pisaniu i ewoluowaniu.
+%description -l pl
+CGI::Application jest przeznaczony do u³atwiania tworzenia z³o¿onych,
+daj±cych siê ponownie wykorzystywaæ, aplikacji opartych na WWW. Ten
+modu³ implementuje metodologiê, która - je¶li stosowana - sprawi, ¿e
+oprogramowanie sieciowe bêdzie prostsze w projektowaniu,
+dokumentowaniu, pisaniu i ewoluowaniu.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
