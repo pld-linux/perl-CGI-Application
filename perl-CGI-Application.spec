@@ -13,7 +13,7 @@ Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	4c292788565d198a0860934ccd72a808
+# Source0-md5:	1bdba93d7eae2253caf016c1c0f95d1c
 URL:		http://search.cpan.org/dist/CGI-Application/
 BuildRequires:	perl-Module-Build >= 0.20
 BuildRequires:	perl-devel >= 1:5.8.0
