@@ -6,7 +6,7 @@
 %define		pdir	CGI
 %define		pnam	Application
 Summary:	CGI::Application - framework for building reusable web-applications
-Summary(pl):	CGI::Application - szkielet do tworzenia aplikacji WWW wielokrotnego u¿ytku
+Summary(pl.UTF-8):   CGI::Application - szkielet do tworzenia aplikacji WWW wielokrotnego uÅ¼ytku
 Name:		perl-CGI-Application
 Version:	4.06
 Release:	1
@@ -34,11 +34,11 @@ sophisticated, reusable web-based applications. This module implements
 a methodology which, if followed, will make your web software easier
 to design, easier to document, easier to write, and easier to evolve.
 
-%description -l pl
-CGI::Application jest przeznaczony do u³atwiania tworzenia z³o¿onych,
-daj±cych siê ponownie wykorzystywaæ, aplikacji opartych na WWW. Ten
-modu³ implementuje metodologiê, która - je¶li stosowana - sprawi, ¿e
-oprogramowanie sieciowe bêdzie prostsze w projektowaniu,
+%description -l pl.UTF-8
+CGI::Application jest przeznaczony do uÅ‚atwiania tworzenia zÅ‚oÅ¼onych,
+dajÄ…cych siÄ™ ponownie wykorzystywaÄ‡, aplikacji opartych na WWW. Ten
+moduÅ‚ implementuje metodologiÄ™, ktÃ³ra - jeÅ›li stosowana - sprawi, Å¼e
+oprogramowanie sieciowe bÄ™dzie prostsze w projektowaniu,
 dokumentowaniu, pisaniu i ewoluowaniu.
 
 %prep
