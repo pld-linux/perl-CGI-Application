@@ -9,7 +9,7 @@ Summary:	CGI::Application - framework for building reusable web-applications
 Summary(pl.UTF-8):	CGI::Application - szkielet do tworzenia aplikacji WWW wielokrotnego użytku
 Name:		perl-CGI-Application
 Version:	4.50
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -57,6 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 ./Build install
 
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/CGI/%{pnam}/Plugin
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a Examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
@@ -68,5 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Changes
 %{perl_vendorlib}/CGI/*.pm
 %{perl_vendorlib}/CGI/%{pnam}
+%{perl_vendorlib}/CGI/%{pnam}/Plugin
 %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
