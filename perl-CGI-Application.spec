@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# do perform "make test"
 
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	CGI
 %define		pnam	Application
 Summary:	CGI::Application - framework for building reusable web-applications
